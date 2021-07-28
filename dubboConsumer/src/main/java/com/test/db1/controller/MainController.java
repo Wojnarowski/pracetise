@@ -5,6 +5,7 @@ import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * @ClassName MainController
@@ -41,7 +42,8 @@ public class MainController {
     @Reference(version = "1.0.0")
     DemoService demoService;
 
-    @RequestMapping("login")
+    @RequestMapping("test")
+    @ResponseBody
     public String login(Model model) {
 
       return  demoService.sayHello("张三");
