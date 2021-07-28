@@ -1,4 +1,4 @@
-package com.guozz.db1.service;
+package com.test.db1.service;
 
 /**
  * @ClassName DemoService

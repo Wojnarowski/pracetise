@@ -1,6 +1,6 @@
-package com.guozz.db1.service.impl;
+package com.test.db1.service.impl;
 
-import com.guozz.db1.service.DemoService;
+import com.test.db1.service.DemoService;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.stereotype.Component;
 
