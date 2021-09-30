@@ -1,4 +1,4 @@
-package com.guozz.jvm;
+package com.paul.java.jvm;
 
 /**
  * @ClassName ClassTest
