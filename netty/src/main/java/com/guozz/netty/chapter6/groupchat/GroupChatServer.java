@@ -1,10 +1,7 @@
 package com.guozz.netty.chapter6.groupchat;
 
 import io.netty.bootstrap.ServerBootstrap;
-import io.netty.channel.ChannelInitializer;
-import io.netty.channel.ChannelOption;
-import io.netty.channel.ChannelPipeline;
-import io.netty.channel.EventLoopGroup;
+import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
@@ -81,10 +78,19 @@ public class GroupChatServer {
                         }
                     });
 
-
+            System.out.println("netty 服务器启动");
+            ChannelFuture channelFuture = b.bind(port).sync();
+            //监听关闭
+            channelFuture.channel().closeFuture().sync();
         }finally {
-
+            bossGroup.shutdownGracefully();
+            workerGroup.shutdownGracefully();
         }
+    }
+
+    public static void main(String[] args) throws Exception {
+
+        new GroupChatServer(7000).run();
     }
 }
 
