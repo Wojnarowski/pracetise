@@ -1,5 +1,8 @@
 package com.guozz.netty.chapter6.groupchat;
 
+import io.netty.channel.EventLoopGroup;
+import io.netty.channel.nio.NioEventLoopGroup;
+
 /**
  * @ClassName GroupChatClient
  * @Description TODO
@@ -29,6 +32,22 @@ package com.guozz.netty.chapter6.groupchat;
  */
 //客户端
 public class GroupChatClient {
+
+    //属性
+    private final String host;
+    private final int port;
+    public GroupChatClient(String host, int port) {
+        this.host = host;
+        this.port = port;
+    }
+
+    public void run() throws Exception {
+        EventLoopGroup group = new NioEventLoopGroup();
+
+
+    }
+
+
 
 }
 
