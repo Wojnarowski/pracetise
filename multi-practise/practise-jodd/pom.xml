@@ -26,7 +26,7 @@
      <dependency>
         <groupId>org.jodd</groupId>
         <artifactId>jodd-all</artifactId>
-        <version>4.3.0</version>
+        <version>5.0.4</version>
     </dependency>
   </dependencies>
 </project>
