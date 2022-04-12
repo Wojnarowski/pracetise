@@ -14,7 +14,7 @@
 	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<haddop.version>2.7.3</haddop.version>
+		<haddop.version>3.2.3</haddop.version>
 	</properties>
 	<dependencies>
 		<dependency>
